@@ -1,0 +1,32 @@
+pos(
+  posT, 
+  topM, 
+  rightM, 
+  bottomM, 
+  leftM
+)
+    
+  if posT == relative
+    if topM != null && rightM != null && bottomM != null && leftM != null
+      margin topM rightM bottomM leftM
+    else
+      if topM != null
+        margin-top topM
+      if rightM != null
+        margin-right rightM
+      if bottomM != null
+        margin-bottom bottomM
+      if leftM != null
+        margin-left leftM
+    position posT
+    
+  else
+    if topM != null
+      top topM
+    if rightM != null
+      right rightM
+    if bottomM != null
+      bottom bottomM
+    if leftM != null
+      left leftM
+    position posT
