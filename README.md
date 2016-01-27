@@ -33,7 +33,6 @@ Will output:
   position: relative;
 }
 .Div__2 {
-  margin: 10px 10px 10px 10px;
   margin: 10px;
   position: relative;
 }
