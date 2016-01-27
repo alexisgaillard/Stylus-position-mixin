@@ -10,15 +10,21 @@ Example:
   pos(relative)
 
 .Div__1
-  pos(relative null auto null auto)
-  
+  pos(relative auto)
+
 .Div__2
+  pos(relative 10px auto)
+
+.Div__3
+  pos(relative null 10px null 10px)
+  
+.Div__5
   pos(relative 10px 10px 10px 10px)
   
-.Div__3
+.Div__6
   pos(absolute 0 0 0 0)
 
-.Div__4
+.Div__7
   pos(fixed 0 0 null 0)
 ```
 
@@ -28,22 +34,34 @@ Will output:
   position: relative;
 }
 .Div__1 {
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   position: relative;
 }
 .Div__2 {
-  margin: 10px;
+  margin: 10px auto;
   position: relative;
 }
 .Div__3 {
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+.Div__5 {
+  margin: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+.Div__6 {
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   position: absolute;
 }
-.Div__4 {
+.Div__7 {
   top: 0;
   right: 0;
   left: 0;
