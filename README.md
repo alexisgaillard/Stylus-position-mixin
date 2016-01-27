@@ -1,5 +1,5 @@
 # Stylus position mixin
-A Bourbon like mixin for the position property.
+A Stylus mixin to manage the "position" property.
 
 ### Dependencies
   * [stylus](https://github.com/LearnBoost/stylus)
@@ -28,7 +28,7 @@ Example:
   pos(fixed 0 0 null 0)
 ```
 
-Will output:
+Output:
 ```css
 .Div__0 {
   position: relative;
