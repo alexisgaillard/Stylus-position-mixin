@@ -17,6 +17,9 @@ Example:
 
 .Div__3
   pos(relative null 10px null 10px)
+
+.Div__4
+  pos(relative 0 10px 0 10px)
   
 .Div__5
   pos(relative 10px 10px 10px 10px)
@@ -46,12 +49,12 @@ Output:
   margin-left: 10px;
   position: relative;
 }
+.Div__4 {
+  margin: 0 10px 0 10px;
+  position: relative;
+}
 .Div__5 {
   margin: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
   position: relative;
 }
 .Div__6 {
