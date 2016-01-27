@@ -6,44 +6,49 @@ A Bourbon like mixin for the position property.
 
 Example:
 ```stylus
-@import "position"
+.Div__0
+  pos(relative)
 
-.Div__one
-  pos(relative, null, auto, null, auto)
+.Div__1
+  pos(relative null auto null auto)
+  
+.Div__2
+  pos(relative 10px 10px 10px 10px)
+  
+.Div__3
+  pos(absolute 0 0 0 0)
 
-.Div__two
-  pos(relative, 0, 10px, 100px, 10px)
-
-.Div__three
-  pos(absolute, 10px, 10px, 10px, 10px)
-
-.Div__four
-  pos(static, 0, 0, null, 0)
+.Div__4
+  pos(fixed 0 0 null 0)
 ```
 
 Will output:
 ```css
-.Div__one {
+.Div__0 {
+  position: relative;
+}
+.Div__1 {
   margin-right: auto;
   margin-left: auto;
   position: relative;
 }
-.Div__two {
-  margin: 0 10px 100px 10px;
+.Div__2 {
+  margin: 10px 10px 10px 10px;
+  margin: 10px;
   position: relative;
 }
-.Div__three {
-  top: 10px;
-  right: 10px;
-  bottom: 10px;
-  left: 10px;
+.Div__3 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   position: absolute;
 }
-.Div__four {
+.Div__4 {
   top: 0;
   right: 0;
   left: 0;
-  position: static;
+  position: fixed;
 }
 ```
 
