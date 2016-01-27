@@ -7,7 +7,7 @@ pos(argument)
   argumentLength = length(argument)
   
   if argumentLength > 5
-    error('Too much arguments passed in the pos() mixin: pos(position margin-top margin-right margin-bottom margin-left)')
+    error('pos() too much arguments: pos(position margin-top margin-right margin-bottom margin-left)')
   if argumentLength < 2
     position posT
   else
@@ -16,6 +16,11 @@ pos(argument)
         margin topM rightM bottomM leftM
       if topM == rightM && topM == bottomM && topM == leftM
         margin topM
+      if auto in argument && argumentLength < 4
+        if topM == auto
+          margin 0 auto
+        else
+          margin topM auto
       else
         if topM != null
           margin-top topM
