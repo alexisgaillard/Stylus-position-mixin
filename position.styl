@@ -12,7 +12,7 @@ pos(argument)
     position posT
   else
     if posT == relative
-      if topM != null && rightM != null && bottomM != null && leftM != null
+      if topM != null && rightM != null && bottomM != null && leftM != null && topM != rightM && topM != bottomM && topM != leftM
         margin topM rightM bottomM leftM
       if topM == rightM && topM == bottomM && topM == leftM
         margin topM
