@@ -12,8 +12,6 @@ pos(argument)
     position posT
   else
     if posT == relative
-      if topM != null && rightM != null && bottomM != null && leftM != null && topM != rightM && topM != bottomM && topM != leftM
-        margin topM rightM bottomM leftM
       if topM == rightM && topM == bottomM && topM == leftM
         margin topM
       if auto in argument && argumentLength < 4
@@ -21,7 +19,9 @@ pos(argument)
           margin 0 auto
         else
           margin topM auto
-      else
+      if topM != null && rightM != null && bottomM != null && leftM != null && !(topM == rightM && topM == bottomM && topM == leftM)
+        margin topM rightM bottomM leftM
+      if !(topM == rightM && topM == bottomM && topM == leftM) && !(auto in argument && argumentLength < 4) && !(topM != null && rightM != null && bottomM != null && leftM != null)
         if topM != null
           margin-top topM
         if rightM != null
